@@ -45,7 +45,7 @@ python sMNIST_nvar.py --net-type expRNN --nvar expn --nhid 512 --permute --lr 5e
 ###### sRNN with non-normal parameterization 
 
 ```
-python sMNIST_nvar.py --net-type nnRNN --nvar sqrtlogn --nhid 512 --permute --lr 2e-4 --lr_orth 2e-5 --alpha 0.99 --alam 0.1 --Tdecay 1e-4 --rinit cayley --cuda
+python sMNIST_nvar.py --net-type nnRNN --nvar n2 --nhid 512 --permute --lr 2e-4 --lr_orth 2e-5 --alpha 0.99 --alam 0.1 --Tdecay 1e-4 --rinit cayley --cuda
 ```
 
 
