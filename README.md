@@ -30,6 +30,25 @@ python [task]_[activation].py [args]
 python sMNIST_[activation].py [args]
 ```
 
+###### sRNN without parameterization  
+
+````
+python sMNIST_nvar.py --net-type RNN --nvar log2n --permute --lr 5e-5 --nhid 512 --alpha 0.9 --rinit random --cuda
+````
+
+###### sRNN with exponontial parameterization 
+
+```
+python sMNIST_nvar.py --net-type expRNN --nvar expn --nhid 512 --permute --lr 5e-4 --lr_orth 5e-5 --alpha 0.99 --rinit cayley --cuda
+```
+
+###### sRNN with non-normal parameterization 
+
+```
+python sMNIST_nvar.py --net-type nnRNN --nvar sqrtlogn --nhid 512 --permute --lr 2e-4 --lr_orth 2e-5 --alpha 0.99 --alam 0.1 --Tdecay 1e-4 --rinit cayley --cuda
+```
+
+
 Options:
 - net-type : type of RNN to use in test
 - nvar : $\rho_j$ function (`expn`, `n^2`,  `n`, `log2n`, `logn`, `sqrtlogn`)
